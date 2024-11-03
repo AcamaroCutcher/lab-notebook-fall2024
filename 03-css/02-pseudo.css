@@ -2,3 +2,13 @@
   width: 600px;
   margin: 40px auto;
 }
+
+p::first-letter {
+  font-size: 3em;
+}
+
+/* Sudo classes we use a single : */
+/* It's a state */
+p:hover {
+  background-color: lightskyblue;
+}

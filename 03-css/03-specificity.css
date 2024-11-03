@@ -1,4 +1,21 @@
 /* Specificity Exercise */
+/* How to calculate what element is going to be specific.*/
+/* How specific the selectors are going to be.*/
+/* Target those specific tags.*/
+/* What is going to be more specific.*/
+/* Be ware how it is going to calculated.*/
+
+/*X - Y - Z*/
+/* x =  Number of class selectors.*/
+/* Y =  Number of class selectors, sudo class selectors, and attributes selectors.*/
+/* Z =  Elements selector and the sudo element selector.*/
+/* You want to calculate this automatically.*/
+
+/* 0-1-2 */
+/* 1-0-1 this is more specific.*/
+/* 0-0-10 */
+/* 0-0-10 */
+/* 0-1-10 This is more specific*/
 
 nav .list-item > a {
   color: var(--purple);
@@ -16,9 +33,13 @@ section .main::first-line {
   color: var(--purple);
 }
 
-nav ul.menu li#first a:not([class='visited']) {
+nav ul.menu li#first a:not([class="visited"]) {
   color: var(--purple);
 }
+
+/* This type of selector is bad, this is bad css and bad selector.
+There are better selectors to select a */
+/* This is not base 10.*/
 
 div ol li ul li ol li ul li a {
   color: var(--purple);

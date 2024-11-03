@@ -9,7 +9,8 @@ body {
 .header,
 .section,
 .aside {
-  box-sizing: content-box;
+  box-sizing: border-box;
+  /* The width of the box is the width of the content.*/
   padding: 10px;
   border: 4px solid var(--black);
 }
@@ -26,6 +27,7 @@ body {
 }
 
 .aside {
+  /* Have the float right to have it on the right. */
   float: right;
   width: 25%;
   height: 300px;
