@@ -6,19 +6,17 @@
   --royalblue: #4169e1;
   --teal: #008080;
   --violet: #9400d3;
+  --green1: #51a100;
 }
 
 /* Use attribute selectors for the first part of the exercise */
+
 /* 
 li[class] {
   color: var(--red);
 } */
 
-li[class="cat"] {
-  color: var(--teal);
-}
-
-li[class^="p"] {
+/* li[class^="p"] {
   color: var(--green);
 }
 
@@ -29,8 +27,45 @@ li[class*="do"] {
 li[class$="g"] {
   color: var(--violet);
 }
+
+li[class="cat"] {
+  color: var(--teal);
+} */
+li[class] {
+  color: var(--royalblue);
+}
+
+li[class$="og"] {
+  color: var(--magenta);
+}
+
+li[class="parrot"] {
+  color: var(--green1);
+}
+
+li#cat {
+  color: var(--teal);
+}
+
 /* Use descendant, child, and sibling selectors for the second part */
 
+div[class$="food"] li {
+  color: var(--violet);
+}
+
+div[class$="food"] li:nth-child(3) {
+  color: var(--royalblue);
+}
+
+div[class$="food"] li.first {
+  color: var(--green1);
+}
+
+div[class$="cleaning"] ol {
+  color: var(--green1);
+}
+
+/* 
 section li {
   color: var(--green);
 }
@@ -41,4 +76,4 @@ section li {
 
 .second + li {
   color: var(--royalblue);
-}
+} */

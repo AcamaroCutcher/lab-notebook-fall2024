@@ -17,21 +17,42 @@
 /* 0-0-10 */
 /* 0-1-10 This is more specific*/
 
+/* Specificity of nav .list-item > a is  0-1-2 because
+we have two elements namely nav and "a" and one class selector namely .list-item */
+
 nav .list-item > a {
   color: var(--purple);
 }
+
+/* Specifity of #main::first-letter is 1 - 0 - 1  
+   because #main is an identity tag and ::first-letter is a sudo-element selector*/
 
 #main::first-letter {
   color: var(--purple);
 }
 
+/*  0-1-1  */
+/* Input is an element or sudo element, not sure but has specificity 0-0-1*/
+/* Likewise [type] has specificifyt 0-1-0 */
+
 input[type] {
   color: var(--purple);
 }
 
+/* 0-1-2 */
+/* This selector has the following speicifity of
+   Selection and ::first-line together has specifity 0-0-2.
+   Laslty .main has specificity 0-1-0. 
+   */
+
 section .main::first-line {
   color: var(--purple);
 }
+
+/* 1-2-4 */
+/* nav, ul, li, a has specificity 0-0-1 */
+/* .menu, class="visited" has specificity 0-1-0 */
+/* Lastly #first has specificity 1-0-0 */
 
 nav ul.menu li#first a:not([class="visited"]) {
   color: var(--purple);
@@ -40,6 +61,9 @@ nav ul.menu li#first a:not([class="visited"]) {
 /* This type of selector is bad, this is bad css and bad selector.
 There are better selectors to select a */
 /* This is not base 10.*/
+
+/* 0-0-10 */
+/* All 10 are elements with specificity 0-0-1 */
 
 div ol li ul li ol li ul li a {
   color: var(--purple);

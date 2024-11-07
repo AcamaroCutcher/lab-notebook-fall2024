@@ -17,10 +17,16 @@
   background-color: var(--purple);
 }
 
+.static,
+.relative {
+  flex-flow: row wrap;
+}
+
 .absolute {
   background-color: var(--maroon);
 }
 
 .fixed {
   background-color: var(--darkgolden);
+  align-items: flex-end;
 }
