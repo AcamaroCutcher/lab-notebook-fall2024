@@ -3,21 +3,67 @@
 }
 
 /* Flex Container 1 */
+.flex-container-1 {
+  display: flex;
+  width: 900px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 /* Flex Container 2 */
+.flex-container-2 {
+  display: flex;
+  width: 900px;
+  flex-flow: row-reverse;
+  flex-wrap: wrap;
+  justify-content: right;
+}
 
 /* Flex Container 3 */
+.flex-container-3 {
+  display: flex;
+  height: 400px;
+  width: 900px;
+  flex-flow: column-reverse;
+  flex-wrap: wrap-reverse;
+}
 
 /* use height: 400px; on the container */
 
 /* Flex Container 4 */
-
+.flex-container-4 {
+  display: flex;
+  width: 900px;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+}
 /* Flex Container 5 */
 
+.flex-container-5 {
+  display: flex;
+  width: 900px;
+}
+
+.flex-container-5 .item1 {
+  height: 100px;
+}
+
+.flex-container-5 .item2 {
+  height: 200px;
+}
+
+.flex-container-5 .item3 {
+  height: 100px;
+}
+
+.flex-container-5 .item4 {
+  height: 50px;
+}
 /* Flex Container 6 */
 
 .flex-container-6 .flex-item {
-  width: 400px;
+  width: 900px;
+  height: 300px;
 }
 
 /* use height: 300px; on the container */
