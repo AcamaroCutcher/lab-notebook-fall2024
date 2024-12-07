@@ -38,8 +38,38 @@ const filterFamily = (characters, house) => {
 
 const reduceHouses = (characters) => {
   // Return an object with the number of characters from each house
-  const sum = characters.reduce((acc, curr) => acc + curr.id, 0);
-  return sum;
+
+  // const obj = {
+  //   Stark: 0,
+  //   Lannister: 0,
+  //   Targaryen: 0,
+  //   Greyjoy: 0,
+  //   Seaworth: 0,
+  //   Tarth: 0,
+  // };
+  // // What is happening here is that we are using the input which is characters,
+  // // now the accumulator can be assigned an initial value, in this case we have it set to obj.
+  // // This is useful becuase we can then acces values from the obj.
+  // // We do this to then alter the values inside the obj.
+  // const houses = characters.reduce((acc, curr) => {
+  //   if (acc.hasOwnProperty(curr.house)) {
+  //     acc[curr.house]++;
+  //   }
+
+  //   return acc;
+  // }, obj);
+
+  // return obj;
+
+  // There is a simpler approach that we can use that will be very useful!
+
+  const houses = characters.reduce((acc, curr) => {
+    acc.hasOwnProperty(curr.house) ? acc[curr.house]++ : (acc[curr.house] = 1);
+
+    return acc;
+  }, {});
+
+  return houses;
 };
 
 console.log(mapNameFamily(characters));
